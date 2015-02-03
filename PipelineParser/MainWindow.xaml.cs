@@ -31,9 +31,6 @@ namespace PipelineParser
 
             string[] bulkDataInLines = bulkData.Split('\n');
                       
-
-
-
-        }
+                    }
     }
 }
