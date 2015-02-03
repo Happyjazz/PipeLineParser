@@ -1,0 +1,23 @@
+﻿<Window x:Class="PipelineParser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="800" Width="800">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Margin="5" Grid.Row="1">
+            <Button Content="Calculate" Click="Button_Click" />
+        </StackPanel>
+
+        <TextBox x:Name="txtBoxBulkData" Margin="5" Grid.Row="0" AcceptsReturn="True" TextWrapping="NoWrap" AcceptsTab="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+
+
+
+    </Grid>
+</Window>
