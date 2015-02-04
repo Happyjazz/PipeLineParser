@@ -23,6 +23,10 @@ namespace PipelineParser
         public ResultsWindow(PipelineData pipelineData)
         {
             InitializeComponent();
+
+            string column = pipelineData.GetHeadlines()[2];
+
+            txtBoxMonth1Sum.Text = pipelineData.GetSumOfMonth(column);
         }
     }
 }

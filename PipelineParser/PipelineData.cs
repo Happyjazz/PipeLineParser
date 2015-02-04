@@ -64,7 +64,7 @@ namespace PipelineParser
         }
 
         /// <summary>
-        /// Method to get a stringarray of all column names
+        /// Method to get a stringarray of all column names.
         /// </summary>
         /// <returns></returns>
         public string[] GetHeadlines()
@@ -72,6 +72,28 @@ namespace PipelineParser
             string[] headlineCopy = new string[_columnHeadlines.Length];
             _columnHeadlines.CopyTo(headlineCopy, 0);
             return headlineCopy;
+        }
+
+        /// <summary>
+        /// Gets the sum of a single months revenue.
+        /// </summary>
+        /// <param name="columnHeadline">The name of the column to get the sum from.</param>
+        /// <returns></returns>
+        public string GetSumOfMonth(string columnHeadline)
+        {
+            //object sumObject;
+            //sumObject = _table.Compute(String.Format("Sum(\"{0}\")", columnHeadline), "");
+
+            //return sumObject.ToString();
+
+            int sum = 0;
+
+            foreach (DataRow row in _table.Rows)
+            {
+                sum += Convert.ToInt32(row[columnHeadline]);
+            }
+
+            return sum.ToString();
         }
     }
 }
