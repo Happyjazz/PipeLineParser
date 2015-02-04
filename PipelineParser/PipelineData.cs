@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,6 +53,11 @@ namespace PipelineParser
                 string[] lineOfData = bulkDataInLines[i].Split('\t');
 
                 pipelineData.Rows.Add(lineOfData);
+
+                foreach (var item in lineOfData)
+                {
+                    Debug.Print(item);
+                }
             }
 
             _table = pipelineData;

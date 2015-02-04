@@ -3,6 +3,44 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="ResultsWindow" Height="800" Width="800">
     <Grid>
-        <DataGrid Height="Auto" Width="Auto" Name="gridOverview" ItemsSource="{Binding}" />
+        <!--<DataGrid Height="Auto" Width="Auto" Name="gridOverview" ItemsSource="{Binding}" />-->
+
+        <!--Parent Grid-->
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!--Month1-->
+        <Grid Grid.Row="0" Style="{StaticResource gridMonths}" >
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="1" Content="Måned" Style="{StaticResource labelHeadlineStyle}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Omsætning" Style="{StaticResource labelStyle}"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Name="txtBoxMonth1Sum" Style="{StaticResource textBoxStyle}" />
+            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet omsætning" Style="{StaticResource labelStyle}"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Name="txtBoxMonth1WeightedSum" Style="{StaticResource textBoxStyle}" />
+            <Label Grid.Row="3" Grid.Column="0" Content="% vægtet omsætning" Style="{StaticResource labelStyle}"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Name="txtBoxMonth1WeightedPercentage" Style="{StaticResource textBoxStyle}" />
+        </Grid>
+
+
+
     </Grid>
 </Window>

@@ -3,6 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="textBoxStyle" TargetType="TextBox">
+            <Setter Property="Width" Value="{Binding ElementName=Container, Path=ActualWidth}"/>
+            <Setter Property="Height" Value="20" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+        </Style>
+        <Style x:Key="labelStyle" TargetType="Label">
+            <Setter Property="VerticalAlignment" Value="Top" />
+        </Style>
+        <Style x:Key="labelHeadlineStyle" TargetType="Label">
+            
+        </Style>
+        <Style x:Key="gridMonths" TargetType="Grid">
+            
+        </Style>
     </Application.Resources>
 </Application>

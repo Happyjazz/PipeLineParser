@@ -23,7 +23,6 @@ namespace PipelineParser
         public ResultsWindow(PipelineData pipelineData)
         {
             InitializeComponent();
-            gridOverview.DataContext = pipelineData.Table.DefaultView;
         }
     }
 }
