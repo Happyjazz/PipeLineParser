@@ -20,13 +20,10 @@ namespace PipelineParser
     /// </summary>
     public partial class ResultsWindow : Window
     {
-        private DataTable _pipelineData;
-
-
-        public ResultsWindow(DataTable pipelineData)
+        public ResultsWindow(PipelineData pipelineData)
         {
             InitializeComponent();
-            _pipelineData = pipelineData;
+            gridOverview.DataContext = pipelineData.Table.DefaultView;
         }
     }
 }

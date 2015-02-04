@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PipelineParser
 {
-    class PipelineData
+    public class PipelineData
     {
         private DataTable _table;
         private string[] _columnHeadlines;
@@ -30,11 +30,17 @@ namespace PipelineParser
         {
             string[] bulkDataInLines = bulkData.Trim().Split('\n');
 
+            for (int i = 0; i < bulkDataInLines.Length; i++)
+            {
+                bulkDataInLines[i] = bulkDataInLines[i].Replace("\r", "");
+            }
+            
             _columnHeadlines = bulkDataInLines[0].Split('\t');
 
             DataTable pipelineData = new DataTable();
 
             //Create the columns in the DataTable, from the Array of headlines
+            int columnNumber = 1;
             foreach (var headline in _columnHeadlines)
             {
                 pipelineData.Columns.Add(headline);
