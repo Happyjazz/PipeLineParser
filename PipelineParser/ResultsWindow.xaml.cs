@@ -29,6 +29,7 @@ namespace PipelineParser
             labelMonth.Content = column;
             txtBoxMonth1Sum.Text = pipelineData.GetSumOfMonth(column);
             txtBoxMonth1WeightedSum.Text = pipelineData.GetWeightedSumOfMonth(column);
+            txtBoxMonth1WeightedPercentage.Text = pipelineData.GetWeightedPercentage(column);
         }
     }
 }
