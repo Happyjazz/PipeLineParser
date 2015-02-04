@@ -43,7 +43,7 @@ namespace PipelineParser
                     int index = i - 2;
                     string column = pipelineData.GetHeadlines()[i];
 
-                    labelMonths[index].Content = column;
+                    //labelMonths[index].Content = column; //Used to enable dynamic month names - according to Excel Headlines
                     txtBoxSums[index].Text = pipelineData.GetSumOfMonth(column).ToString("c2");
                     string temp = pipelineData.GetWeightedSumOfMonth(column).ToString("c2");
                     txtBoxWeightedSums[index].Text = temp;

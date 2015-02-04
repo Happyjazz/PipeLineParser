@@ -1,12 +1,12 @@
 ﻿<Window x:Class="PipelineParser.ResultsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ResultsWindow" Height="768" Width="1024" ResizeMode="CanMinimize">
+        Title="Pipeline results" Height="768" Width="1024" >
     <Grid Margin="10">
-        <!--<DataGrid Height="Auto" Width="Auto" Name="gridOverview" ItemsSource="{Binding}" />-->
 
         <!--Parent Grid-->
         <Grid.RowDefinitions>
+            <RowDefinition />
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
@@ -20,7 +20,7 @@
         </Grid.ColumnDefinitions>
 
         <!--Month1-->
-        <Grid Grid.Row="0" Grid.Column="0" Style="{StaticResource gridMonths}" >
+        <Grid Grid.Row="0" Grid.Column="0" Style="{StaticResource gridMonths}">
             <Grid.RowDefinitions>
                 <RowDefinition />
                 <RowDefinition />
@@ -28,15 +28,15 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="1" Content="Måned" Name="labelMonth1" Style="{StaticResource labelHeadlineStyle}"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Januar" Name="labelMonth1" Style="{StaticResource labelHeadlineStyle}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" Grid.Column="1" Name="txtBoxMonth1Sum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="2" Grid.Column="1" Name="txtBoxMonth1WeightedSum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet omsætning i %:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet Pipeline i %:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="3" Grid.Column="1" Name="txtBoxMonth1WeightedPercentage" Style="{StaticResource textBoxStyle}" />
         </Grid>
 
@@ -49,15 +49,15 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="1" Content="Måned" Name="labelMonth2" Style="{StaticResource labelHeadlineStyle}"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Februar" Name="labelMonth2" Style="{StaticResource labelHeadlineStyle}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" Grid.Column="1" Name="txtBoxMonth2Sum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="2" Grid.Column="1" Name="txtBoxMonth2WeightedSum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet omsætning i %:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet Pipeline i %:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="3" Grid.Column="1" Name="txtBoxMonth2WeightedPercentage" Style="{StaticResource textBoxStyle}" />
         </Grid>
 
@@ -70,15 +70,15 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="1" Content="Måned" Name="labelMonth3" Style="{StaticResource labelHeadlineStyle}"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Marts" Name="labelMonth3" Style="{StaticResource labelHeadlineStyle}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" Grid.Column="1" Name="txtBoxMonth3Sum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="2" Grid.Column="1" Name="txtBoxMonth3WeightedSum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet omsætning i %:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet Pipeline i %:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="3" Grid.Column="1" Name="txtBoxMonth3WeightedPercentage" Style="{StaticResource textBoxStyle}" />
         </Grid>
 
@@ -91,15 +91,15 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="1" Content="Måned" Name="labelMonth4" Style="{StaticResource labelHeadlineStyle}"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="April" Name="labelMonth4" Style="{StaticResource labelHeadlineStyle}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" Grid.Column="1" Name="txtBoxMonth4Sum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="2" Grid.Column="1" Name="txtBoxMonth4WeightedSum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet omsætning i %:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet Pipeline i %:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="3" Grid.Column="1" Name="txtBoxMonth4WeightedPercentage" Style="{StaticResource textBoxStyle}" />
         </Grid>
 
@@ -112,15 +112,15 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="1" Content="Måned" Name="labelMonth5" Style="{StaticResource labelHeadlineStyle}"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Maj" Name="labelMonth5" Style="{StaticResource labelHeadlineStyle}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" Grid.Column="1" Name="txtBoxMonth5Sum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="2" Grid.Column="1" Name="txtBoxMonth5WeightedSum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet omsætning i %:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet Pipeline i %:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="3" Grid.Column="1" Name="txtBoxMonth5WeightedPercentage" Style="{StaticResource textBoxStyle}" />
         </Grid>
 
@@ -133,15 +133,15 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="1" Content="Måned" Name="labelMonth6" Style="{StaticResource labelHeadlineStyle}"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Juni" Name="labelMonth6" Style="{StaticResource labelHeadlineStyle}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" Grid.Column="1" Name="txtBoxMonth6Sum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="2" Grid.Column="1" Name="txtBoxMonth6WeightedSum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet omsætning i %:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet Pipeline i %:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="3" Grid.Column="1" Name="txtBoxMonth6WeightedPercentage" Style="{StaticResource textBoxStyle}" />
         </Grid>
 
@@ -154,15 +154,15 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="1" Content="Måned" Name="labelMonth7" Style="{StaticResource labelHeadlineStyle}"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Juli" Name="labelMonth7" Style="{StaticResource labelHeadlineStyle}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" Grid.Column="1" Name="txtBoxMonth7Sum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="2" Grid.Column="1" Name="txtBoxMonth7WeightedSum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet omsætning i %:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet Pipeline i %:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="3" Grid.Column="1" Name="txtBoxMonth7WeightedPercentage" Style="{StaticResource textBoxStyle}" />
         </Grid>
 
@@ -175,15 +175,15 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="1" Content="Måned" Name="labelMonth8" Style="{StaticResource labelHeadlineStyle}"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="August" Name="labelMonth8" Style="{StaticResource labelHeadlineStyle}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" Grid.Column="1" Name="txtBoxMonth8Sum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="2" Grid.Column="1" Name="txtBoxMonth8WeightedSum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet omsætning i %:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet Pipeline i %:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="3" Grid.Column="1" Name="txtBoxMonth8WeightedPercentage" Style="{StaticResource textBoxStyle}" />
         </Grid>
 
@@ -196,15 +196,15 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="1" Content="Måned" Name="labelMonth9" Style="{StaticResource labelHeadlineStyle}"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="September" Name="labelMonth9" Style="{StaticResource labelHeadlineStyle}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" Grid.Column="1" Name="txtBoxMonth9Sum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="2" Grid.Column="1" Name="txtBoxMonth9WeightedSum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet omsætning i %:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet Pipeline i %:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="3" Grid.Column="1" Name="txtBoxMonth9WeightedPercentage" Style="{StaticResource textBoxStyle}" />
         </Grid>
 
@@ -217,15 +217,15 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="1" Content="Måned" Name="labelMonth10" Style="{StaticResource labelHeadlineStyle}"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Oktober" Name="labelMonth10" Style="{StaticResource labelHeadlineStyle}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" Grid.Column="1" Name="txtBoxMonth10Sum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="2" Grid.Column="1" Name="txtBoxMonth10WeightedSum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet omsætning i %:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet Pipeline i %:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="3" Grid.Column="1" Name="txtBoxMonth10WeightedPercentage" Style="{StaticResource textBoxStyle}" />
         </Grid>
 
@@ -238,15 +238,15 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="1" Content="Måned" Name="labelMonth11" Style="{StaticResource labelHeadlineStyle}"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="November" Name="labelMonth11" Style="{StaticResource labelHeadlineStyle}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" Grid.Column="1" Name="txtBoxMonth11Sum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="2" Grid.Column="1" Name="txtBoxMonth11WeightedSum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet omsætning i %:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet Pipeline i %:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="3" Grid.Column="1" Name="txtBoxMonth11WeightedPercentage" Style="{StaticResource textBoxStyle}" />
         </Grid>
 
@@ -259,19 +259,19 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="1" Content="Måned" Name="labelMonth12" Style="{StaticResource labelHeadlineStyle}"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="December" Name="labelMonth12" Style="{StaticResource labelHeadlineStyle}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" Grid.Column="1" Name="txtBoxMonth12Sum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet omsætning:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Vægtet Pipeline:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="2" Grid.Column="1" Name="txtBoxMonth12WeightedSum" Style="{StaticResource textBoxStyle}" />
-            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet omsætning i %:" Style="{StaticResource labelStyle}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Vægtet Pipeline i %:" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="3" Grid.Column="1" Name="txtBoxMonth12WeightedPercentage" Style="{StaticResource textBoxStyle}" />
         </Grid>
         
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Content="Tilbage" Click="Button_Click" />
+        <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Content="Tilbage" Click="Button_Click" />
 
 
     </Grid>
