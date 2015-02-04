@@ -48,14 +48,6 @@ namespace PipelineParser
                     txtBoxWeightedSums[index].Text = pipelineData.GetWeightedSumOfMonth(column);
                     txtBoxWeightedPercentages[index].Text = pipelineData.GetWeightedPercentage(column);
                 }
-
-
-                //string column = pipelineData.GetHeadlines()[3];
-
-                //labelMonth1.Content = column;
-                //txtBoxMonth1Sum.Text = pipelineData.GetSumOfMonth(column);
-                //txtBoxMonth1WeightedSum.Text = pipelineData.GetWeightedSumOfMonth(column);
-                //txtBoxMonth1WeightedPercentage.Text = pipelineData.GetWeightedPercentage(column);
             }
             catch (Exception ex)
             {
@@ -120,6 +112,13 @@ namespace PipelineParser
             txtBoxWeightedPercentages.Add(txtBoxMonth10WeightedPercentage);
             txtBoxWeightedPercentages.Add(txtBoxMonth11WeightedPercentage);
             txtBoxWeightedPercentages.Add(txtBoxMonth12WeightedPercentage);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
         }
     }
 }

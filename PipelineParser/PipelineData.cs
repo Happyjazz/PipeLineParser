@@ -119,8 +119,8 @@ namespace PipelineParser
         /// <returns></returns>
         public string GetWeightedPercentage(string columnHeadline)
         {
-            float sumOfMonth = float.Parse(GetSumOfMonth(columnHeadline), CultureInfo.InvariantCulture.NumberFormat);
-            float weightedSumOfMonth = float.Parse(GetWeightedSumOfMonth(columnHeadline), CultureInfo.InvariantCulture.NumberFormat);
+            float sumOfMonth = float.Parse(GetSumOfMonth(columnHeadline));
+            float weightedSumOfMonth = float.Parse(GetWeightedSumOfMonth(columnHeadline));
 
             float percentage = weightedSumOfMonth / sumOfMonth;
 

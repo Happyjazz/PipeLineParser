@@ -9,6 +9,7 @@
             <Setter Property="Width" Value="{Binding ElementName=Container, Path=ActualWidth}"/>
             <Setter Property="Height" Value="20" />
             <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="FontWeight" Value="Bold" />
         </Style>
         
         <!--Label Styles-->
@@ -18,7 +19,7 @@
         
         <!--Headline Styles-->
         <Style x:Key="labelHeadlineStyle" TargetType="Label">
-            
+            <Setter Property="FontWeight" Value="ExtraBold" />
         </Style>
         
         <!--Grid Styles-->
