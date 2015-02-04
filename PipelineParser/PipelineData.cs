@@ -112,6 +112,11 @@ namespace PipelineParser
             return sum.ToString();
         }
 
+        /// <summary>
+        /// Gets the percentage that the weighted revenue makes of the total revenue.
+        /// </summary>
+        /// <param name="columnHeadline">The name of the column to get the weighted percentage from</param>
+        /// <returns></returns>
         public string GetWeightedPercentage(string columnHeadline)
         {
             float sumOfMonth = float.Parse(GetSumOfMonth(columnHeadline), CultureInfo.InvariantCulture.NumberFormat);

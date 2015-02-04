@@ -22,14 +22,21 @@ namespace PipelineParser
     {
         public ResultsWindow(PipelineData pipelineData)
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
 
-            string column = pipelineData.GetHeadlines()[3];
+                string column = pipelineData.GetHeadlines()[3];
 
-            labelMonth.Content = column;
-            txtBoxMonth1Sum.Text = pipelineData.GetSumOfMonth(column);
-            txtBoxMonth1WeightedSum.Text = pipelineData.GetWeightedSumOfMonth(column);
-            txtBoxMonth1WeightedPercentage.Text = pipelineData.GetWeightedPercentage(column);
+                labelMonth1.Content = column;
+                txtBoxMonth1Sum.Text = pipelineData.GetSumOfMonth(column);
+                txtBoxMonth1WeightedSum.Text = pipelineData.GetWeightedSumOfMonth(column);
+                txtBoxMonth1WeightedPercentage.Text = pipelineData.GetWeightedPercentage(column);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -28,9 +28,16 @@ namespace PipelineParser
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ResultsWindow resultsWindow = new ResultsWindow(new PipelineData(txtBoxBulkData.Text));
-            resultsWindow.Show();
-            this.Close();
+            try
+            {
+                ResultsWindow resultsWindow = new ResultsWindow(new PipelineData(txtBoxBulkData.Text));
+                resultsWindow.Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
