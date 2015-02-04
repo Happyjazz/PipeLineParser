@@ -1,7 +1,7 @@
 ﻿<Window x:Class="PipelineParser.ResultsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ResultsWindow" Height="768" Width="1024">
+        Title="ResultsWindow" Height="768" Width="1024" ResizeMode="CanMinimize">
     <Grid Margin="10">
         <!--<DataGrid Height="Auto" Width="Auto" Name="gridOverview" ItemsSource="{Binding}" />-->
 
@@ -271,7 +271,7 @@
             <TextBox Grid.Row="3" Grid.Column="1" Name="txtBoxMonth12WeightedPercentage" Style="{StaticResource textBoxStyle}" />
         </Grid>
         
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Content="Back" Click="Button_Click" />
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Content="Tilbage" Click="Button_Click" />
 
 
     </Grid>

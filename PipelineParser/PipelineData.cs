@@ -42,7 +42,6 @@ namespace PipelineParser
             DataTable pipelineData = new DataTable();
 
             //Create the columns in the DataTable, from the Array of headlines
-            int columnNumber = 1;
             foreach (var headline in _columnHeadlines)
             {
                 pipelineData.Columns.Add(headline);
@@ -80,16 +79,16 @@ namespace PipelineParser
         /// </summary>
         /// <param name="columnHeadline">The name of the column to get the sum from.</param>
         /// <returns></returns>
-        public string GetSumOfMonth(string columnHeadline)
+        public decimal GetSumOfMonth(string columnHeadline)
         {
-            int sum = 0;
+            decimal sum = 0;
 
             foreach (DataRow row in _table.Rows)
             {
-                sum += Convert.ToInt32(row[columnHeadline]);
+                sum += Convert.ToDecimal(row[columnHeadline]);
             }
 
-            return sum.ToString();
+            return sum;
         }
 
         /// <summary>
@@ -98,18 +97,18 @@ namespace PipelineParser
         /// </summary>
         /// <param name="columnHeadline">The name of the column to get the weighted sum from</param>
         /// <returns></returns>
-        public string GetWeightedSumOfMonth(string columnHeadline)
+        public decimal GetWeightedSumOfMonth(string columnHeadline)
         {
-            float sum = 0;
+            decimal sum = 0;
 
             foreach (DataRow row in _table.Rows)
             {
-                float revenue = Convert.ToInt32(row[columnHeadline]);
-                float pipelinePercentage = Convert.ToInt32(row[1]);
+                decimal revenue = Convert.ToDecimal(row[columnHeadline]);
+                decimal pipelinePercentage = Convert.ToDecimal(row[1]);
                 sum += revenue * (pipelinePercentage / 100);
             }
 
-            return sum.ToString();
+            return sum;
         }
 
         /// <summary>
@@ -119,10 +118,10 @@ namespace PipelineParser
         /// <returns></returns>
         public string GetWeightedPercentage(string columnHeadline)
         {
-            float sumOfMonth = float.Parse(GetSumOfMonth(columnHeadline));
-            float weightedSumOfMonth = float.Parse(GetWeightedSumOfMonth(columnHeadline));
+            decimal sumOfMonth = GetSumOfMonth(columnHeadline);
+            decimal weightedSumOfMonth = GetWeightedSumOfMonth(columnHeadline);
 
-            float percentage = weightedSumOfMonth / sumOfMonth;
+            decimal percentage = weightedSumOfMonth / sumOfMonth;
 
             return string.Format("{0:0.##\\%}", percentage*100);
         }

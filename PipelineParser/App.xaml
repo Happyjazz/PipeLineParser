@@ -10,6 +10,8 @@
             <Setter Property="Height" Value="20" />
             <Setter Property="VerticalAlignment" Value="Top" />
             <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="AcceptsReturn" Value="False" />
+            <Setter Property="IsReadOnly" Value="True" />
         </Style>
         
         <!--Label Styles-->

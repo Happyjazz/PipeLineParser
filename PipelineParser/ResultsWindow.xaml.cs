@@ -44,8 +44,9 @@ namespace PipelineParser
                     string column = pipelineData.GetHeadlines()[i];
 
                     labelMonths[index].Content = column;
-                    txtBoxSums[index].Text = pipelineData.GetSumOfMonth(column);
-                    txtBoxWeightedSums[index].Text = pipelineData.GetWeightedSumOfMonth(column);
+                    txtBoxSums[index].Text = pipelineData.GetSumOfMonth(column).ToString("c2");
+                    string temp = pipelineData.GetWeightedSumOfMonth(column).ToString("c2");
+                    txtBoxWeightedSums[index].Text = temp;
                     txtBoxWeightedPercentages[index].Text = pipelineData.GetWeightedPercentage(column);
                 }
             }
