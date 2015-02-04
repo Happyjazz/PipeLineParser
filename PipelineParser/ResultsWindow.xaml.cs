@@ -1,29 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace PipelineParser
 {
     /// <summary>
-    /// Interaction logic for ResultsWindow.xaml
+    ///     Interaction logic for ResultsWindow.xaml
     /// </summary>
     public partial class ResultsWindow : Window
     {
-        List<Label> labelMonths;
-        List<TextBox> txtBoxSums;
-        List<TextBox> txtBoxWeightedSums;
-        List<TextBox> txtBoxWeightedPercentages;
+        private readonly List<Label> labelMonths;
+        private readonly List<TextBox> txtBoxSums;
+        private readonly List<TextBox> txtBoxWeightedPercentages;
+        private readonly List<TextBox> txtBoxWeightedSums;
 
         public ResultsWindow(PipelineData pipelineData)
         {
@@ -33,8 +23,9 @@ namespace PipelineParser
 
                 labelMonths = new List<Label>();
                 txtBoxSums = new List<TextBox>();
-                txtBoxWeightedSums = new List<TextBox>(); ;
-                txtBoxWeightedPercentages = new List<TextBox>(); ;
+                txtBoxWeightedSums = new List<TextBox>();
+                
+                txtBoxWeightedPercentages = new List<TextBox>();
 
                 PopulateLists();
 
@@ -117,9 +108,9 @@ namespace PipelineParser
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
+            var mainWindow = new MainWindow();
             mainWindow.Show();
-            this.Close();
+            Close();
         }
     }
 }
