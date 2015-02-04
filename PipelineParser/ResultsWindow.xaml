@@ -31,7 +31,7 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="1" Content="Måned" Style="{StaticResource labelHeadlineStyle}"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Måned" Name="labelMonth" Style="{StaticResource labelHeadlineStyle}"/>
             <Label Grid.Row="1" Grid.Column="0" Content="Omsætning" Style="{StaticResource labelStyle}"/>
             <TextBox Grid.Row="1" Grid.Column="1" Name="txtBoxMonth1Sum" Style="{StaticResource textBoxStyle}" />
             <Label Grid.Row="2" Grid.Column="0" Content="Vægtet omsætning" Style="{StaticResource labelStyle}"/>

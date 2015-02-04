@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -81,16 +82,31 @@ namespace PipelineParser
         /// <returns></returns>
         public string GetSumOfMonth(string columnHeadline)
         {
-            //object sumObject;
-            //sumObject = _table.Compute(String.Format("Sum(\"{0}\")", columnHeadline), "");
-
-            //return sumObject.ToString();
-
             int sum = 0;
 
             foreach (DataRow row in _table.Rows)
             {
                 sum += Convert.ToInt32(row[columnHeadline]);
+            }
+
+            return sum.ToString();
+        }
+
+        /// <summary>
+        /// Gets the weighted sum of a single month.
+        /// The sum of the individual individual offers divided with the pipeline-%
+        /// </summary>
+        /// <param name="columnHeadline">The name of the column to get the weighted sum from</param>
+        /// <returns></returns>
+        public string GetWeightedSumOfMonth(string columnHeadline)
+        {
+            float sum = 0;
+
+            foreach (DataRow row in _table.Rows)
+            {
+                float revenue = Convert.ToInt32(row[columnHeadline]);
+                float pipelinePercentage = Convert.ToInt32(row[1]);
+                sum += revenue * (pipelinePercentage / 100);
             }
 
             return sum.ToString();

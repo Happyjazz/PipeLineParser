@@ -24,9 +24,11 @@ namespace PipelineParser
         {
             InitializeComponent();
 
-            string column = pipelineData.GetHeadlines()[2];
+            string column = pipelineData.GetHeadlines()[3];
 
+            labelMonth.Content = column;
             txtBoxMonth1Sum.Text = pipelineData.GetSumOfMonth(column);
+            txtBoxMonth1WeightedSum.Text = pipelineData.GetWeightedSumOfMonth(column);
         }
     }
 }
